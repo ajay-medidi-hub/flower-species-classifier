@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>ML API</title>
+   
+</head>
+
+<body>
+ <div class="login">
+	<h1>Flower Class Prediction</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"  method="post">
+    Sepal Length	<input type="text" name="Sepal_Length"  required="required" /> <br>
+      Sepal Width  <input type="text" name="Sepal_Width"  required="required" /> <br>
+		Petal Length <input type="text" name="Petal_Length"  required="required" /> <br>
+		Petal Width <input type="text" name="Petal_Width"  required="required" /> <br>
+   <!-- Species: <input type="text" id="name" value="{{ prediction_text }}">   -->
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>  
+   {{ prediction_text }} 
+   <!--
+   <br><br>
+   <form> 
+    <label for="name">Species:</label>
+    <input type="text" id="name" value= {{  prediction_text  }} >
+   </form> -->
+
+ </div>
+
+
+</body>
+</html>
